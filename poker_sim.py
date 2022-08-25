@@ -167,10 +167,10 @@ def compareHands(hand1,hand2):
     else:
         return 'Unclear'
 
-def lambda_handler(event=None,context=None):
+def simulate_hands():
     dealt_hands = deal(2,7)
     for h in dealt_hands:
         print(f"{h} : {handResult(h)}")
     return compareHands(dealt_hands[0],dealt_hands[1])
 
-print(lambda_handler())
+print(simulate_hands())
